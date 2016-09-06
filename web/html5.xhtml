@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+    <title>Prueba Html5 - JSF</title>
+</h:head>
+<h:body>
+    <h1>
+        Uso del Html5 y JSF
+    </h1>
+    <h:form>
+        <h:panelGrid columns="2">
+            <!-- Indicando desde el core JSF, los atributos nuevos. -->
+            Matricula:
+            <h:inputText value="#{formHtml5.matricula}">
+                <f:passThroughAttribute name="placeholder" value="Digite la matricula"/>
+                <f:passThroughAttribute name="type" value="number"/>
+                <f:passThroughAttribute name="required" value="required"/>
+            </h:inputText>
+
+            <!-- Indicando las propiedades de manera directa, con el espaciado pt. -->
+            Correo:
+            <h:inputText value="#{formHtml5.correo}" pt:placeholder="Indique Correo" pt:type="email" pt:required="required"/>
+
+        </h:panelGrid>
+        <h:commandButton value="Enviar" action="null"/>
+    </h:form>
+</h:body>
+</html>

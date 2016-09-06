@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Facelet Title</title>
+</h:head>
+<h:body>
+    <h1>Formulario Básico de conceptos de JSF</h1>
+    <h:form>
+
+        Nombre: <h:inputText id="nombre" value="#{miFormulario.nombre}"/>
+        <h:message style="color: red" for="nombre"/><br/>
+
+        Apellido <h:inputText id="apellido" value="#{miFormulario.apellido}"/>
+        <h:message style="color: red" for="apellido"/><br/>
+
+        <!-- Enviando el formulario vía GET-->
+        <h:commandButton action="#{miFormulario.procesarFormularioMetodoGet()}" value="Enviar Formulario GET"/>
+
+        <!--Enviando el formulario vía POST-->
+        <h:commandButton action="#{miFormulario.procesarFormularioMetodoPost()}" value="Enviar Formulario POST"/>
+
+        <!-- Como evitar que aplica la validación, inclyendo la propiedad de immediate -->
+        <h:commandButton action="#{miFormulario.limpiarDatos()}" value="Limpiar Datos"/>
+
+        <!-- Rompe la validación puesta en el formulario-->
+        <h:commandButton action="#{miFormulario.limpiarDatos()}" value="Limpiar Datos Inmediato" immediate="true"/>
+        <h:commandButton action="#{miFormulario.cambiarMayusculas()}" value="Cambiar Mayusculas"/>
+
+        <!-- Prueba variable Flash -->
+        <h:commandButton action="#{miFormulario.pruebaAmbienteFlash()}" value="Ambiente Flash" immediate="true" />
+    </h:form>
+    <p>
+        Gracias Sr. #{miFormulario.nombre} #{miFormulario.apellido}
+    </p>
+
+    <p>
+        La suma de 2 + 4 = #{formularioRequest.sumar(2.0, 4.0)}
+    </p>
+    <br />
+</h:body>
+</html>

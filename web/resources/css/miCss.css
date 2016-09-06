@@ -1,0 +1,15 @@
+/* 
+    Document   : miCss
+    Created on : 09/14/2013, 09:20:53 AM
+    Author     : vacax
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+p.azul{
+    color: blue;
+}

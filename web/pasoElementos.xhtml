@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+
+<head jsf:id="head">
+    <title>JSF 2.2</title>
+</head>
+<body jsf:id="body">
+<h1>Paso de elementos directos...</h1>
+<form jsf:id="form">
+    Matrícula:
+    <input type="text" jsf:id="name"  placeholder="Inserte Matricula" jsf:value="#{formHtml5.matricula}"/>
+    <button jsf:action="#{formHtml5.procesarMatricula()}">Procesar...</button>
+</form>
+<p>
+    La matrícula procesada es #{formHtml5.matricula}
+</p>
+</body>
+
+</html>

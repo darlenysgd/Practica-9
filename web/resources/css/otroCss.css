@@ -1,0 +1,15 @@
+/* 
+    Document   : otroCss
+    Created on : 09/14/2013, 09:29:04 AM
+    Author     : vacax
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+p.rojo{
+    color: red;
+}
