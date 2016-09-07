@@ -17,7 +17,8 @@
             <!--Convertidores Implicitos -->
             <h:outputLabel value="Entero:"/>
             <h:inputText value="#{formConvertidoresyValidadores.entero}" id="Valorentero"
-                         converterMessage="Tiene que ser entero" required="true">
+                         converterMessage="Tiene que ser entero" required="true"
+            validatorMessage="Debe ser entre el rango #{10} y #{20}">
                 <f:validateLongRange minimum="10" maximum="20" />
             </h:inputText>
             <h:message for="Valorentero"/>
