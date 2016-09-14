@@ -5,7 +5,7 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough" xmlns:p="http://java.sun.com/jsf/html">
 <h:head>
     <title>Prueba Html5 - JSF</title>
 </h:head>
@@ -29,6 +29,10 @@
 
         </h:panelGrid>
         <h:commandButton value="Enviar" action="null"/>
+        <h:commandLink value="Link" action="#{formHtml5.procesar}"/>
     </h:form>
+
+    <h:commandButton value="Link" action="#{formHtml5.procesar}"/>
+    <p:commandButton value="Prime" action="#{formHtml5.procesar}" />
 </h:body>
 </html>
